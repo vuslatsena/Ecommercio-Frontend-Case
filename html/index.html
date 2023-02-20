@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Ecommercio Frontend Case ( To Do App With VanillaJS )</title>
+
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+
+  <body>
+    <main class="app">
+      <section class="greeting">
+        <h1 class="title">To do</h1>
+        <button id="add-new-task">Add New Task</button>
+      </section>
+      <div class="modal" id="simpleModal">
+        <div class="modal-content">
+          <section class="create-todo">
+            <form id="new-todo-form">
+              <div class="add-todo">
+                <label for="content">
+                  Title
+                  <input
+                    class="task-title"
+                    type="text"
+                    name="content"
+                    id="content"
+                    placeholder="e.g make a video"
+                  />
+                </label>
+                <label for="date"> Date
+                  <input
+                    class="task-date"
+                    type="date"
+                    id="date"
+                    name="date"
+                    value="dd/mm/yyyy"
+                    min="2022-10-11"
+                    max="2023-12-31"
+                  />
+                </label>
+                <div class="add-todo-actions">
+                  <button class="cancelBtn">Cancel</button>
+                  <input id="saveBtn" type="submit" value="Save" />
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+      <section class="todo-list" id="todo-application">
+      </section>
+    </main>
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>
