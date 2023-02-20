@@ -99,9 +99,9 @@ function renderTodoApplication() {
       "November",
       "December",
     ];
-    var month = date.getUTCMonth() + 1; //months from 1-12
+    var month = date.getUTCMonth() + 1;
     var monthName = monthNames[month - 1];
-    var day = date.getUTCDate(); //days from 1-31
+    var day = date.getUTCDate();
 
     const weekDaysName = [
       "Sunday",
@@ -147,8 +147,6 @@ function renderTodoApplication() {
   application.innerHTML = applicationRender;
 
   todoList.map((item) => {
-    let todoElement = document.getElementById(item.key);
-    let todoElementInput = document.getElementById("input-" + item.key);
     let todoElementEdit = document.getElementById("edit-" + item.key);
     let todoElementDelete = document.getElementById("delete-" + item.key);
     let todoElementComplete = document.getElementById(
@@ -277,7 +275,6 @@ function onCompleteClick(event) {
 
 function setInitialToDos(username) {
   let todoStore = TodoStore.getInstance();
-  // get the todo list for the user
   todoStore.getTodosForUser(username);
 }
 
